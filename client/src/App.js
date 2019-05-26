@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./App.css";
+import BugItemList from "./components/BugItemList";
+import AppNavBar from "./components/AppNavBar";
+import FilterBar from "./components/FilterBar";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <AppNavBar />
+        <div className="container mt-2">
+          <div className="row">
+            <div className="col-3">
+              <FilterBar />
+            </div>
+            <div className="col-9">
+              <BugItemList />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Provider>
   );
 }
 
