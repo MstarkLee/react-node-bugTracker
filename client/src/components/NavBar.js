@@ -11,24 +11,7 @@ import {
   Container
 } from "reactstrap";
 
-// class AppNavbar extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             isOpen: false
-//          }
-//     }
-//     render() {
-//         return (  );
-//     }
-// }
-
-// toggle = ()=>{
-
-// }
-// export default AppNavbar;
-
-class AppNavbar extends Component {
+class NavBar extends Component {
   state = { isOpen: false };
 
   toggle = () => {
@@ -58,4 +41,4 @@ class AppNavbar extends Component {
   }
 }
 
-export default AppNavbar;
+export default NavBar;
